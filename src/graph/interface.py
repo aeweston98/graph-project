@@ -1,17 +1,5 @@
 from abc import abstractmethod, ABC
-
-class EdgeInterface(ABC):
-    @abstractmethod
-    def GetID(self) -> str:
-        pass
-    
-    @abstractmethod
-    def GetBaggage(self, key: str) -> str:
-        pass
-
-    @abstractmethod
-    def SetBaggage(self, key, value: str):
-        pass
+from typing import set
 
 class NodeInterface(ABC):
     @abstractmethod
@@ -26,9 +14,12 @@ class NodeInterface(ABC):
     def SetBaggage(self, key, value: str):
         pass
 
+    @abstractmethod
+    def GetAdjacent(self) -> Set[NodeInterface]:
+        pass
 
     @abstractmethod
-    def GetAdjacent(self) -> set:
+    def AddAdjacent(self, adj: NodeInterface):
         pass
 
 class GraphInterface(ABC):

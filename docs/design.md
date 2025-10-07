@@ -44,7 +44,6 @@ Layer diagram:<br>
 * Get Adjacent
 * AddEdge
 * DeleteEdge
-* Delete
 
 ## Edges
 ### Edge struct
@@ -63,4 +62,3 @@ Layer diagram:<br>
 * GetID
 * GetBaggage
 * SetBaggage
-* Delete
