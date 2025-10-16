@@ -5,7 +5,7 @@ class Node():
     def __init__(self, id: str):
         self.id: str = id
         self.baggage: Dict[str, str] = {}
-        self.adjacent: Set['Node']
+        self.adjacent: Set['Node'] = set()
 
     def GetID(self) -> str:
         return self.id
@@ -16,8 +16,8 @@ class Node():
     def SetBaggage(self, key, value: str):
         self.baggage[key] = value
 
-    def AddAdjacent(self, Node):
-        self.adjacent.add('Node')
+    def AddAdjacent(self, adj):
+        self.adjacent.add(adj)
 
     def GetAdjacent(self) -> Set['Node']:
         return self.adjacent
