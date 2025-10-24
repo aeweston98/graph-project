@@ -1,7 +1,7 @@
 import graph.coloring.generate as generate
 import unittest
 
-class ColoringTestCase(unittest.TestCase):
+class GenerateTestCase(unittest.TestCase):
     def test_generate_bipartite_graph(self):
         bgraph = generate.GenerateBipartiteGraph(5)
 
