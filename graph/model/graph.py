@@ -16,6 +16,9 @@ class Node():
     def SetBaggage(self, key, value: str):
         self.baggage[key] = value
 
+    def HasBaggage(self, key) -> bool:
+        return key in self.baggage
+
     def AddAdjacent(self, adj):
         self.adjacent.add(adj)
 
@@ -25,6 +28,9 @@ class Node():
 class Graph():
     def __init__(self):
         self.nodes: Dict[str, Node] = {}
+
+    def GetNodes(self) -> Set[Node]:
+        return set(self.nodes.values())
 
     def GetNode(self, id: str) -> Node:
         return self.nodes[id]
